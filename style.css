@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Charm:wght@400;700&family=Cinzel+Decorative:wght@400;700;900&family=Dosis:wght@200..800&family=Homemade+Apple&family=Italianno&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kaushan+Script&family=Merienda:wght@300..900&family=Oranienbaum&family=Rubik+Doodle+Shadow&family=Satisfy&family=Tangerine:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Dosis", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(#2b1055, #7597de);
+  overflow-x: hidden;
+}
+
+header {
+  position: absolute;
+  margin-top: -5%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  padding: 100px;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 10000;
+}
+
+header .logo {
+  color: white;
+  font-size: 2rem;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header ul li {
+  list-style: none;
+  margin-left: 20px;
+}
+
+header ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 23px;
+  padding: 6px 15px;
+  border-radius: 20px;
+}
+
+header ul li a:hover,
+header ul li a.active {
+  background-color: white;
+  color: #2b1055;
+}
+
+section::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, #1c0522, transparent);
+  z-index: 1000;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+section img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+#moon {
+  mix-blend-mode: screen;
+}
+
+#mountains_front {
+  z-index: 10;
+}
+
+section #text {
+  position: absolute;
+  font-size: 7.5vw;
+  color: white;
+  z-index: 9;
+  right: -350px;
+}
+
+section #btn {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 30px;
+  border-radius: 40px;
+  background: white;
+  color: #1c0522;
+  font-size: 1.5em;
+  margin-left: 47%;
+  z-index: 9;
+  cursor: pointer;
+  transform: translateY(100px);
+}
+
+.sec {
+  position: relative;
+  padding: 100px;
+  background: #0e061b;
+}
+
+.sec h1 {
+  font-size: 3.5em;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.sec p {
+  font-size: 1rem;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    padding: 50px;
+  }
+
+  header .logo {
+    font-size: 1.5rem;
+  }
+
+  header ul {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  header ul li {
+    margin: 10px 0;
+  }
+
+  header ul li a {
+    font-size: 18px;
+  }
+
+  section #text {
+    font-size: 5vw;
+    right: -200px;
+  }
+
+  section #btn {
+    margin-left: 35%;
+  }
+
+  .sec {
+    padding: 50px;
+  }
+
+  .sec h1 {
+    font-size: 2.5em;
+  }
+
+  /* Ensure full image visibility on mobile */
+  section img {}
+}
